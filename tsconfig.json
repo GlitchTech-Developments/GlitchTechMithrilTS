@@ -13,6 +13,6 @@
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
 		"jsx": "preserve",
-		"types": ["vite/client", "mithril"]
+		"types": ["vite/client", "mithril", "node"]
 	}
 }
