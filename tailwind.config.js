@@ -1,11 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	darkMode: [
+		"[data-theme='corporate']",
+		"[data-theme='night']",
+		"[data-theme='cyberpunk']",
+	],
 	content: ["./src/**/*"],
 	theme: {
 		extend: {},
 	},
 	daisyui: {
-		themes: ["corporate", "black", "cyberpunk"],
+		themes: ["corporate", "night", "cyberpunk"],
 	},
-	plugins: [require("flowbite/plugin"), require("daisyui")],
+	plugins: [require("daisyui")],
 };
