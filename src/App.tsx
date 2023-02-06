@@ -1,13 +1,18 @@
-export const App = () => {
+import Navbar from "./components/layout/nav";
+import Hero from "./components/sections/1-hero";
+
+const App = (JSXWrapper: any) => {
 	return {
 		view: () => {
 			return (
-				<main class="bg-gradient-to-b from-gray-400 via-gray-600 to-blue-800 h-screen flex">
-					<h1 className="m-auto text-4xl text-white">
-						MithrilTS App
-					</h1>
-				</main>
+				<>
+					<JSXWrapper component={Navbar} />
+					<main class="bg-gradient-to-b from-gray-800 via-gray-900 to-blue-900 h-screen flex flex-col pt-20">
+						<JSXWrapper component={Hero} />
+					</main>
+				</>
 			);
 		},
 	};
 };
+export default App;

@@ -8,7 +8,10 @@
 		"lint": "eslint ./src/*"
 	},
 	"dependencies": {
-		"mithril": "^2.2.2"
+		"daisyui": "^2.50.0",
+		"flowbite": "^1.6.3",
+		"mithril": "^2.2.2",
+		"theme-change": "^2.3.0"
 	},
 	"devDependencies": {
 		"@types/mithril": "^2.0.12",
