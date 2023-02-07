@@ -1,7 +1,12 @@
 import { themeChange } from "theme-change";
 
 const Navbar = () => {
-	let currentTheme = localStorage.theme;
+	let currentTheme = localStorage.theme ? localStorage.theme : "night";
+
+	if (!localStorage.theme) {
+		localStorage.setItem("theme", "night");
+	}
+
 	const themes = ["corporate", "night", "cyberpunk"];
 	const handleThemeChange = (e: any) => {
 		switch (e.target.id) {
@@ -34,7 +39,7 @@ const Navbar = () => {
 			themeChange();
 
 			return (
-				<div class="flex fixed top-0 left-0 right-0 bg-[rgba(0,0,0,0.5)] py-2 px-2">
+				<nav class="flex fixed top-0 left-0 right-0 bg-[rgba(0,0,0,0.5)] py-2 px-2 w-full z-50">
 					<div class="text-4xl flex-auto text-left self-center">
 						<a href="/" className="hover:underline">
 							MithrilTS
@@ -93,7 +98,7 @@ const Navbar = () => {
 							"?"
 						)}
 					</div>
-				</div>
+				</nav>
 			);
 		},
 	};

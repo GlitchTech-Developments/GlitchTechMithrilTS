@@ -5,7 +5,7 @@ const App = (JSXWrapper: any, PageWrapper: any) => {
 		view: () => {
 			return (
 				<PageWrapper JsxWrapper={JSXWrapper}>
-					<main class="h-screen flex flex-col pt-20">
+					<main class="min-h-screen flex flex-col w-full">
 						<JSXWrapper component={Hero} />
 					</main>
 				</PageWrapper>
